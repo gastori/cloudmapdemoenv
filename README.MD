@@ -4,4 +4,6 @@ This template allows you to deploy a simple Windows 2016 Server [Generation 2 VM
 
 [![Deploy To Azure](https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/deploytoazure.svg?sanitize=true)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FGastori%2Fcloudmapdemoenv%2Fmain%2Fdeploy.json)
 
+[![Visualize](https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/visualizebutton.svg?sanitize=true)](http://armviz.io/#/?load=https%3A%2F%2Fraw.githubusercontent.com%2FGastori%2Fcloudmapdemoenv%2Fmain%2Fdeploy.json)
+
 ## Note: for PoC only
