@@ -304,6 +304,28 @@
       ]
     },
     {
+      "type": "Microsoft.Compute/virtualMachines/extensions",
+      "apiVersion": "2021-11-01",
+      "name": "[concat(parameters('vmName'), '/DotnetExtension')]",
+      "location": "[resourceGroup().location]",
+      "dependsOn": [
+        "[resourceId('Microsoft.Compute/virtualMachines', parameters('vmName'))]"
+      ],
+      "properties": {
+        "autoUpgradeMinorVersion": true,
+        "publisher": "Microsoft.Compute",
+        "type": "CustomScriptExtension",
+        "typeHandlerVersion": "1.7",
+        "settings": {
+          "fileUris": [
+            "https://raw.githubusercontent.com/gastori/cloudmapdemoenv/main/scripts/dotnet-install.ps1"
+          ],
+          "commandToExecute": "powershell.exe -ExecutionPolicy Unrestricted -File ./dotnet-install.ps1 -Version 2.0.0"
+        },
+        "protectedSettings": {}
+      }
+    },
+    {
         //Enabling MMA 
         "name": "[concat(parameters('vmName'), '/OMSExtension')]",
         "type": "Microsoft.Compute/virtualMachines/extensions",
