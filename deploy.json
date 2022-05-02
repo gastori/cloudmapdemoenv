@@ -111,6 +111,7 @@
     },
      "vaultName": {
       "type": "string",
+      "defaultValue": "mydemokeyvault01",
       "metadata": {
         "description": "The name of the key vault to be created."
       }
