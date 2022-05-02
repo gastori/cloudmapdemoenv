@@ -304,7 +304,7 @@
       ]
     },
     {
-        //Enabling MMA on all VMs using linked template
+        //Enabling MMA 
         "name": "[concat(parameters('vmName'), '/OMSExtension')]",
         "type": "Microsoft.Compute/virtualMachines/extensions",
         "apiVersion": "2019-12-01",
