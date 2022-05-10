@@ -262,7 +262,15 @@
         "osProfile": {
           "computerName": "[parameters('vmName')]",
           "adminUsername": "[parameters('adminUsername')]",
-          "adminPassword": "[parameters('adminPassword')]"
+          "adminPassword": "[parameters('adminPassword')]",
+          "windowsConfiguration": {
+              "enableAutomaticUpdates": false,
+              "provisionVmAgent": true,
+              "patchSettings": {
+                  "enableHotpatching": false,
+                  "patchMode": "Manual"
+              }
+          }
         },
         "storageProfile": {
           "imageReference": {
@@ -319,9 +327,11 @@
         "typeHandlerVersion": "1.7",
         "settings": {
           "fileUris": [
-            "https://raw.githubusercontent.com/gastori/cloudmapdemoenv/main/scripts/dotnet-install.ps1"
+            //"https://raw.githubusercontent.com/gastori/cloudmapdemoenv/main/scripts/dotnet-install.ps1"
+            "https://raw.githubusercontent.com/gastori/cloudmapdemoenv/main/scripts/config.ps1"
           ],
-          "commandToExecute": "powershell.exe -ExecutionPolicy Unrestricted -File ./dotnet-install.ps1 -Version 2.0.0"
+          //"commandToExecute": "powershell.exe -ExecutionPolicy Unrestricted -File ./dotnet-install.ps1 -Version 2.0.0"
+          "commandToExecute": "powershell.exe -ExecutionPolicy Unrestricted -File ./config.ps1"
         },
         "protectedSettings": {}
       }
