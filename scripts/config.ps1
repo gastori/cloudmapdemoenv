@@ -1,11 +1,5 @@
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
-Install-PackageProvider -name NuGet -Force
-Set-PSRepository -Name 'PSGallery' -InstallationPolicy Trusted
-Install-Module PSWindowsUpdate
-Get-WindowsUpdate
-Get-WindowsUpdate -IgnoreReboot
-Install-WindowsUpdate -AcceptAll -IgnoreReboot
-$url = "https://dotnet.microsoft.com/en-us/download/dotnet-framework/thank-you/net48-offline-installer"
+$url = "https://go.microsoft.com/fwlink/?linkid=2088631"
 $localFolder="c:\dotnet"
 New-Item -Path $localFolder -ItemType Directory
 $exePath = "c:\dotnet\4.8-net-runtime.exe"
