@@ -10,6 +10,7 @@ cmd /c start /wait "$exePath0" /q /norestart
 Remove-Item $exePath0 -Force -ErrorAction Ignore
 Remove-Item $localFolder0 -Force -ErrorAction Ignore
 
+Update-MpSignature
 
 $url1 = "https://go.microsoft.com/fwlink/?linkid=2088631"
 $localFolder1="c:\dotnet"
