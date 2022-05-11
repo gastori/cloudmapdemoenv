@@ -13,7 +13,7 @@
     },
     "vmName": {
       "type": "string",
-      "defaultValue": "mydemoW2019",
+      "defaultValue": "mydemoWin2016",
       "metadata": {
         "description": "Name of the virtual machine."
       }
@@ -111,7 +111,7 @@
     },
      "vaultName": {
       "type": "string",
-      "defaultValue": "mydemokeyvault",
+      "defaultValue": "mydemokv01",
       "metadata": {
         "description": "The name of the key vault to be created."
       }
@@ -140,7 +140,7 @@
    "variables": {
     "storageAccountName": "[format('bootdiags{0}', uniqueString(resourceGroup().id))]",
     "vmSize": "Standard_D2s_v3",
-    "OSVersion": "2019-datacenter-gensecond",
+    "OSVersion": "2016-datacenter-gensecond",
     "vaultSkuName": "Standard"
     
   },
@@ -268,7 +268,6 @@
               "provisionVmAgent": true,
               "patchSettings": {
                   "enableHotpatching": false,
-                  "assessmentMode": "ImageDefault",
                   "patchMode": "Manual"
               }
           }
@@ -328,8 +327,10 @@
         "typeHandlerVersion": "1.7",
         "settings": {
           "fileUris": [
+            //"https://raw.githubusercontent.com/gastori/cloudmapdemoenv/main/scripts/dotnet-install.ps1"
             "https://raw.githubusercontent.com/gastori/cloudmapdemoenv/main/scripts/config.ps1"
           ],
+          //"commandToExecute": "powershell.exe -ExecutionPolicy Unrestricted -File ./dotnet-install.ps1 -Version 2.0.0"
           "commandToExecute": "powershell.exe -ExecutionPolicy Unrestricted -File ./config.ps1"
         },
         "protectedSettings": {}
