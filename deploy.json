@@ -278,7 +278,7 @@
             "publisher": "MicrosoftWindowsServer",
             "offer": "WindowsServer",
             "sku": "[variables('OSVersion')]",
-            "version": "latest"
+            "version": "10.0.17763.2803"
           },
           "osDisk": {
             "createOption": "FromImage",
